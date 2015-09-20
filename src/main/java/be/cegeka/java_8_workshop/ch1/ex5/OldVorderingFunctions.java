@@ -1,6 +1,6 @@
-package be.cegeka.java_8_workshop.ch1;
+package be.cegeka.java_8_workshop.ch1.ex5;
 
-import be.cegeka.java_8_workshop.ch1.domain.*;
+import be.cegeka.java_8_workshop.ch1.ex5.domain.*;
 
 import java.util.Date;
 import java.util.function.Function;
