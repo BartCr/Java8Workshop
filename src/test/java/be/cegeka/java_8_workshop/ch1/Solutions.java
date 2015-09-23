@@ -15,7 +15,7 @@ import java.util.function.Predicate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//@SuppressWarnings("ALL")
+@SuppressWarnings("ALL")
 @RunWith(JUnitParamsRunner.class)
 public class Solutions {
 
@@ -161,35 +161,27 @@ public class Solutions {
 
     @Test
     public void exercise_11() {
-
-/*
-Suppose you have a class that implements two interfaces I and J, each of
-which has a method void f(). Exactly what happens if f is an abstract, default,
-or static method of I and an abstract, default, or static method of J? Repeat
-where a class extends a superclass S and implements an interface I, each
-of which has a method void f().
- */
     }
 
-    public static class IJ implements I, J {
-
-        @Override
-        public String abstract_I_abstract_J() {
-            return "abstract_I_abstract_J -> IJ";
-        }
-
-        @Override
-        public String abstract_I_default_J() {
-            return "abstract_I_default_J -> IJ";
-        }
-
-        @Override
-        public String default_I_default_J() {
-            return "default_I_default_J -> IJ";
-        }
-    }
-
-
+//    public static class IJ implements I, J {
+//
+//        @Override
+//        public String abstract_I_abstract_J() {
+//            return "abstract_I_abstract_J -> IJ";
+//        }
+//
+//        @Override
+//        public String abstract_I_default_J() {
+//            return "abstract_I_default_J -> IJ";
+//        }
+//
+//        @Override
+//        public String default_I_default_J() {
+//            return "default_I_default_J -> IJ";
+//        }
+//
+//
+//    }
 
     public interface I {
         String abstract_I_abstract_J();
@@ -235,35 +227,36 @@ of which has a method void f().
         }
     }
 
-    public static class ImplementsF extends SuperF implements InterfaceF {
+//    public static class ImplementsF extends SuperF implements InterfaceF {
+//
+//        @Override
+//        public String abstract_I_abstract_S() {
+//            return null;
+//        }
+//
+//        @Override
+//        public String abstract_I_default_S() {
+//            return null;
+//        }
+//
+//        @Override
+//        public String default_I_abstract_S() {
+//            return null;
+//        }
+//
+//    }
 
-        @Override
-        public String abstract_I_abstract_S() {
-            return null;
-        }
-
-        @Override
-        public String abstract_I_default_S() {
-            return null;
-        }
-
-        @Override
-        public String abstract_I_static_S() {
-            return null;
-        }
-
-        @Override
-        public String default_I_abstract_S() {
-            return null;
-        }
-    }
     public static abstract class SuperF {
 
         public abstract String abstract_I_abstract_S();
 
-        public abstract String abstract_I_default_S();
+        public String abstract_I_default_S() {
+            return "abstract_I_default_S -> SuperF";
+        }
 
-        public abstract String abstract_I_static_S();
+        public static String abstract_I_static_S() {
+            return "abstract_I_static_S -> SuperF";
+        }
 
         public abstract String default_I_abstract_S();
 
@@ -278,6 +271,7 @@ of which has a method void f().
     }
 
     public interface InterfaceF {
+
         String abstract_I_abstract_S();
 
         String abstract_I_default_S();
@@ -285,7 +279,7 @@ of which has a method void f().
         String abstract_I_static_S();
 
         default String default_I_abstract_S() {
-            return "default_I_default_S -> InterfaceF";
+            return "default_I_abstract_S -> InterfaceF";
         }
 
         default String default_I_static_S() {
