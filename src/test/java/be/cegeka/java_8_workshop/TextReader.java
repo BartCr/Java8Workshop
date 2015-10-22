@@ -1,4 +1,4 @@
-package be.cegeka.java_8_workshop.ch2;
+package be.cegeka.java_8_workshop;
 
 import java.io.File;
 import java.io.IOException;

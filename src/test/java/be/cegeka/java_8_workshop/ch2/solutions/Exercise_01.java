@@ -1,6 +1,6 @@
 package be.cegeka.java_8_workshop.ch2.solutions;
 
-import be.cegeka.java_8_workshop.ch2.TextReader;
+import be.cegeka.java_8_workshop.TextReader;
 import org.junit.Test;
 
 import java.util.ArrayList;
