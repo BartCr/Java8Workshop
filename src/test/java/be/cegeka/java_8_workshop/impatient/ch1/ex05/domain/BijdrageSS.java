@@ -1,0 +1,15 @@
+package be.cegeka.java_8_workshop.impatient.ch1.ex05.domain;
+
+public class BijdrageSS {
+    public BijdrageSSType getTypeBijdrage() {
+        return null;
+    }
+
+    public boolean isBijdrageVoorIngevoerdeVerhogingen() {
+        return false;
+    }
+
+    public boolean isVerwijderd() {
+        return false;
+    }
+}
